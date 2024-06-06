@@ -56,7 +56,7 @@ const CreateOrEdit: React.FC<CreateOrEditProps> = ({langData, ...props}) => {
   };
   return (
     <Dialog {...props}>
-      <DialogContent className="sm:max-w-[425px] bg-white">
+      <DialogContent className="sm:tw-max-w-[425px] tw-bg-white">
         {loading ? (
           <Spin />
         ) : (
@@ -67,30 +67,30 @@ const CreateOrEdit: React.FC<CreateOrEditProps> = ({langData, ...props}) => {
                 Sau khi nhập đủ thông tin, Nhấn Lưu để thêm.
               </DialogDescription>
             </DialogHeader>
-            <form className="grid gap-4 py-4" onChange={handleChange}>
-              <div className="grid grid-cols-4 items-center gap-4">
+            <form className="tw-grid tw-gap-4 tw-py-4" onChange={handleChange}>
+              <div className="tw-grid tw-grid-cols-4 tw-items-center tw-gap-4">
                 <Label htmlFor="Key" className="text-right">
                   Key
                 </Label>
                 <Input
                   id="language_key"
-                  className="col-span-3"
+                  className="tw-col-span-3"
                   name="language_key"
                   value={data.language_key}
                 />
               </div>
-              <div className="grid grid-cols-4 items-center gap-4">
+              <div className="tw-grid tw-grid-cols-4 tw-items-center tw-gap-4">
                 <Label htmlFor="language_en" className="text-right">
                   Tiếng Anh
                 </Label>
                 <Textarea
                   id="language_en"
-                  className="col-span-3"
+                  className="tw-col-span-3"
                   value={data.language_en}
                   name="language_en"
                 />
               </div>
-              <div className="grid grid-cols-4 items-center gap-4">
+              <div className="tw-grid tw-grid-cols-4 tw-items-center tw-gap-4">
                 <Label htmlFor="language_vn" className="text-right">
                   Tiếng Việt
                 </Label>
@@ -98,7 +98,7 @@ const CreateOrEdit: React.FC<CreateOrEditProps> = ({langData, ...props}) => {
                   id="language_vn"
                   name="language_vn"
                   value={data.language_vn}
-                  className="col-span-3"
+                  className="tw-col-span-3"
                 />
               </div>
             </form>
