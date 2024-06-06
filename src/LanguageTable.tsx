@@ -86,8 +86,8 @@ const LanguageTable = () => {
     <>
       {open && <CreateOrEdit open={open} langData={detail} onOpenChange={handleOpenChange} />}
       <Confirm {...confirmData} onOpenChange={handleConfirmOpenChange} />
-      <div className="w-full bg-white p-4">
-        <div className="flex justify-between py-4">
+      <div className="tw-w-full tw-bg-white tw-p-4">
+        <div className="tw-flex tw-justify-between tw-py-4">
           <Input
             placeholder="Tìm kiếm..."
             onChange={(event) => handleSearch(event.target.value)}
@@ -96,7 +96,7 @@ const LanguageTable = () => {
           />
           <Button
             variant="outline"
-            className="bg-blue-500 text-white"
+            className="tw-bg-blue-500 tw-text-white"
             onClick={() => {
                 setDetail(undefined);
                 setOpen(true);
@@ -105,29 +105,29 @@ const LanguageTable = () => {
             Thêm mới
           </Button>
         </div>
-        <div className="rounded-md border">
+        <div className="tw-rounded-md tw-border">
           {isLoading ? (
             <Spin />
           ) : (
-            <Table className="bg-white p-3 rounded">
+            <Table className="tw-bg-white tw-p-3 tw-rounded">
               <TableHeader className="">
                 <TableRow>
-                  <TableHead className="w-[120px]">Key</TableHead>
+                  <TableHead className="tw-w-[120px]">Key</TableHead>
                   <TableHead>Tiếng Anh</TableHead>
                   <TableHead>Tiếng Việt</TableHead>
-                  <TableHead className="text-right">Hành động</TableHead>
+                  <TableHead className="tw-text-right">Hành động</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {data?.data.map((item, index) => (
                   <TableRow key={index}>
-                    <TableCell className="font-medium">
+                    <TableCell className="tw-font-medium">
                       {item.language_key}
                     </TableCell>
                     <TableCell>{item.language_en}</TableCell>
                     <TableCell>{item.language_vn}</TableCell>
-                    <TableCell className="text-right">
-                      <div className="space-x-2">
+                    <TableCell className="tw-text-right">
+                      <div className="tw-space-x-2">
                         <Button
                           variant="ghost"
                           title="Sửa"
@@ -138,14 +138,14 @@ const LanguageTable = () => {
                                 }
                             }
                         >
-                          <EditOutlined className="text-xl" />
+                          <EditOutlined className="tw-text-xl" />
                         </Button>
                         <Button title="Xoá" variant="ghost">
                           <DeleteFilled
                             onClick={() => {
                               handleDelete(item.id);
                             }}
-                            className="text-red-600 text-xl"
+                            className="tw-text-red-600 tw-text-xl"
                           />
                         </Button>
                       </div>
@@ -156,7 +156,7 @@ const LanguageTable = () => {
             </Table>
           )}
         </div>
-        <div className="flex items-center justify-end space-x-2 py-4">
+        <div className="tw-flex tw-items-center tw-justify-end tw-space-x-2 tw-py-4">
             <div>
                 <PaginationDemo page={data?.page || 0} limit={10} totalData={data?.total || 0} onPageChange={(page) => 
                     setQuery({...query, page})

@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    important: true,
-    prefix: 'tw-',
   darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -9,6 +7,7 @@ module.exports = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
+  prefix: "tw-",
   theme: {
     container: {
       center: true,
